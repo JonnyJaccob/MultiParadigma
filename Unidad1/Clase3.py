@@ -62,7 +62,7 @@ else:
 
 #if a and a, a or a, b not b:
 x = 10
-if x==10:print;print(x+10);
+if x==10:print;print(x+10)
 
 print("Es 5" if x == 5 else "No es 5") 
 
