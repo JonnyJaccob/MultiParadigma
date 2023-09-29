@@ -5,22 +5,24 @@ conexion = psycopg2.connect(
     user="postgres",
     password="contra",
     host="127.0.0.1",
-    port="5051",
+    port="5433",
     database="clase_db"
 )
 
 try:
     conexion.autocommit = False #defecto autocommit, por defecto falso 
     cursor = conexion.cursor()
-    sentencia = "INSERT INTO cliente(nombre,id_cliente) values(%s,%s)"
-    valores=("Juan",4)
+    sentencia = "INSERT INTO cliente(nombre,id) values(%s,%s)"
+    valores=("Juan","4")
     cursor.execute(sentencia,valores)
 
     log.debug("Sentencia Insert")
     #commit manual
     conexion.commit()
     update = "UPDATE cliente SET nombre=%s WHERE id_cliente=%s"
-    valores=("Hugo",4)
+    valores=("Hugo","4")
 except Exception as e:
     conexion.rollback()
     log.error(e)
+finally:
+    conexion.close()

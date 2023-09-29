@@ -1,0 +1,25 @@
+09:26:11 AM : DEBUG [with.py]:23 Registros insertados: 3
+09:28:04 AM : ERROR [commits.py]:26 no existe la columna «id_cliente» en la relación «cliente»
+LINE 1: INSERT INTO cliente(nombre,id_cliente) values('Juan',4)
+                                   ^
+
+09:28:25 AM : DEBUG [commits.py]:19 Sentencia Insert
+09:30:32 AM : DEBUG [with.py]:23 Registros insertados: 3
+09:32:28 AM : DEBUG [with.py]:23 Registros insertados: 3
+09:33:18 AM : ERROR [update.py]:25 cursor already closed
+09:33:56 AM : ERROR [update.py]:25 cursor already closed
+09:34:28 AM : ERROR [commits.py]:26 llave duplicada viola restricción de unicidad «cliente_pkey»
+DETAIL:  Ya existe la llave (id)=(4).
+
+09:34:43 AM : ERROR [update.py]:25 cursor already closed
+09:35:27 AM : DEBUG [update.py]:23 Registros Actualizados: 2
+09:36:13 AM : ERROR [delete.py]:25 not all arguments converted during string formatting
+09:36:57 AM : ERROR [delete.py]:26 error de sintaxis en o cerca de «'1'»
+LINE 1: DELETE FROM cliente WHERE id_cliente IN '1'
+                                                ^
+
+09:37:09 AM : ERROR [delete.py]:26 not all arguments converted during string formatting
+09:38:00 AM : ERROR [delete.py]:24 not all arguments converted during string formatting
+09:39:07 AM : ERROR [delete.py]:24 not all arguments converted during string formatting
+09:40:52 AM : ERROR [delete.py]:24 not all arguments converted during string formatting
+09:41:32 AM : DEBUG [delete.py]:22 Registros Actualizados: 2
