@@ -1,0 +1,24 @@
+06:22:50 PM : ERROR [Conexion.py]:34 'utf-8' codec can't decode byte 0xf3 in position 79: invalid continuation byte
+06:22:59 PM : ERROR [Conexion.py]:34 'utf-8' codec can't decode byte 0xf3 in position 79: invalid continuation byte
+06:29:45 PM : ERROR [ConexionIntento.py]:31 'utf-8' codec can't decode byte 0xf3 in position 79: invalid continuation byte
+06:33:04 PM : ERROR [ConexionIntento.py]:32 'utf-8' codec can't decode byte 0xf3 in position 79: invalid continuation byte
+06:33:20 PM : ERROR [ConexionIntento.py]:32 'utf-8' codec can't decode byte 0xf3 in position 79: invalid continuation byte
+06:38:17 PM : ERROR [ConexionIntento.py]:32 'utf-8' codec can't decode byte 0xf3 in position 79: invalid continuation byte
+06:39:14 PM : ERROR [ConexionIntento.py]:32 'utf-8' codec can't decode byte 0xf3 in position 79: invalid continuation byte
+06:40:47 PM : DEBUG [ConexionIntento.py]:41 Conexion obtenida <connection object at 0x000001DDEAA58E10; dsn: 'user=postgres password=xxx dbname=clase_db host=127.0.0.1 port=5433', closed: 0>
+06:43:29 PM : DEBUG [ConexionIntento.py]:41 Conexion obtenida <connection object at 0x00000131CD468E10; dsn: 'user=postgres password=xxx dbname=clase_db host=127.0.0.1 port=5433', closed: 0>
+06:44:34 PM : DEBUG [ConexionIntento.py]:41 Conexion obtenida <connection object at 0x000001E0D09C8E10; dsn: 'user=postgres password=xxx dbname=clase_db host=127.0.0.1 port=5433', closed: 0>
+06:45:01 PM : DEBUG [ConexionIntento.py]:41 Conexion obtenida <connection object at 0x0000025309688E10; dsn: 'user=postgres password=xxx dbname=clase_db host=127.0.0.1 port=5433', closed: 0>
+06:47:08 PM : DEBUG [ConexionIntento.py]:41 Conexion obtenida <connection object at 0x000001ABB3288E10; dsn: 'user=postgres password=xxx dbname=clase_db host=127.0.0.1 port=5433', closed: 0>
+06:47:57 PM : DEBUG [Conexion.py]:28 Creacion del Pool: <psycopg2.pool.SimpleConnectionPool object at 0x0000010CA490B0D0>
+06:47:57 PM : DEBUG [Conexion.py]:39 Conexion obtenida <connection object at 0x0000010CA4C28E10; dsn: 'user=postgres password=xxx dbname=clase_db host=127.0.0.1 port=5433', closed: 0>
+06:47:57 PM : DEBUG [Conexion.py]:39 Conexion obtenida <connection object at 0x0000010CA4C28F20; dsn: 'user=postgres password=xxx dbname=clase_db host=127.0.0.1 port=5433', closed: 0>
+06:47:57 PM : DEBUG [Conexion.py]:39 Conexion obtenida <connection object at 0x0000010CA4C29030; dsn: 'user=postgres password=xxx dbname=clase_db host=127.0.0.1 port=5433', closed: 0>
+06:47:57 PM : DEBUG [Conexion.py]:39 Conexion obtenida <connection object at 0x0000010CA4C29140; dsn: 'user=postgres password=xxx dbname=clase_db host=127.0.0.1 port=5433', closed: 0>
+06:47:57 PM : DEBUG [Conexion.py]:39 Conexion obtenida <connection object at 0x0000010CA4C29250; dsn: 'user=postgres password=xxx dbname=clase_db host=127.0.0.1 port=5433', closed: 0>
+06:48:32 PM : DEBUG [Conexion.py]:28 Creacion del Pool: <psycopg2.pool.SimpleConnectionPool object at 0x000001FFD06F9650>
+06:48:32 PM : DEBUG [Conexion.py]:39 Conexion obtenida <connection object at 0x000001FFD0A08E10; dsn: 'user=postgres password=xxx dbname=clase_db host=127.0.0.1 port=5433', closed: 0>
+06:48:32 PM : DEBUG [Conexion.py]:39 Conexion obtenida <connection object at 0x000001FFD0A08F20; dsn: 'user=postgres password=xxx dbname=clase_db host=127.0.0.1 port=5433', closed: 0>
+06:48:32 PM : DEBUG [Conexion.py]:39 Conexion obtenida <connection object at 0x000001FFD0A09030; dsn: 'user=postgres password=xxx dbname=clase_db host=127.0.0.1 port=5433', closed: 0>
+06:48:33 PM : DEBUG [Conexion.py]:39 Conexion obtenida <connection object at 0x000001FFD0A09140; dsn: 'user=postgres password=xxx dbname=clase_db host=127.0.0.1 port=5433', closed: 0>
+06:48:33 PM : DEBUG [Conexion.py]:39 Conexion obtenida <connection object at 0x000001FFD0A09250; dsn: 'user=postgres password=xxx dbname=clase_db host=127.0.0.1 port=5433', closed: 0>

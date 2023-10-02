@@ -5,7 +5,7 @@ from logger_base import log
 class Conexion:
     _DATABASE = "clase_db"
     _USERNAME = "postgres"
-    _PASSWORD = "admin"
+    _PASSWORD = "contra"
     _PORT = "5433"
     _HOST = "127.0.0.1"
     _MIN_CON = 1
@@ -25,7 +25,7 @@ class Conexion:
                     port = cls._PORT,
                     database = cls._DATABASE
                 )
-                log.debug("Crecion del Pool: ",pool)
+                log.debug(f"Creacion del Pool: {cls._pool}")
                 return cls._pool
             else:
                 return cls._pool
@@ -50,6 +50,7 @@ class Conexion:
         log.debug("Conexiones cerradas")
 
 if __name__ == "__main__":
+    print("__________________________")
     conexion1 = Conexion.ObtenerConexion()
     conexion2 = Conexion.ObtenerConexion()
     conexion3 = Conexion.ObtenerConexion()
