@@ -23,3 +23,8 @@ LINE 1: DELETE FROM cliente WHERE id_cliente IN '1'
 09:39:07 AM : ERROR [delete.py]:24 not all arguments converted during string formatting
 09:40:52 AM : ERROR [delete.py]:24 not all arguments converted during string formatting
 09:41:32 AM : DEBUG [delete.py]:22 Registros Actualizados: 2
+12:32:51 PM : DEBUG [commits.py]:19 Sentencia Insert
+12:33:06 PM : DEBUG [update.py]:23 Registros Actualizados: 0
+12:33:15 PM : DEBUG [with.py]:23 Registros insertados: 3
+12:33:17 PM : DEBUG [update.py]:23 Registros Actualizados: 2
+12:33:30 PM : DEBUG [delete.py]:22 Registros Actualizados: 2
