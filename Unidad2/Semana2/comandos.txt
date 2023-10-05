@@ -1,0 +1,16 @@
+python -m pip install django 
+
+django-admin startproject <nombredelproyecto>
+
+python manage.py migrate --solo ver migraciones
+
+python manage.py startapp <webapp> --nombre de la carpeta
+
+#segundo paso
+--agregar la carpeta templates
+
+python manage.py runserver --correr el server 
+
+#agregar en el installed_app
+
+#Solo se mueve al archivo view, urls y settings 
