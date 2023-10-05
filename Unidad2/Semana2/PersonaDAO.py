@@ -5,7 +5,7 @@ from logger_base import log
 
 class PersonaDao:
     _SELECCIONAR = "SELECT id_persona, nombre, apellido, email, telefono FROM persona ORDER BY id_persona"
-    _INSERTAR = "INSERTAR INTO persona (id, nombre, apellido, email, telefono) VALUES(%s,%s,%s,%s)"
+    _INSERTAR = "INSERT INTO persona (nombre, apellido, email, telefono) VALUES(%s,%s,%s,%s)"
     _ACTUALIZAR = "UPDATE persona SET nombre = %s,apellido=%s, email = %s, telefono = %s WHERE id_persona=%s"
     _ELIMINAR = "DELETE FROM persona WHERE id_persona = %s"
 
@@ -20,21 +20,21 @@ class PersonaDao:
             return personas
     @classmethod
     def insertar(cls,persona):
-        with CursorDelPool as cursor:
-            valores = (persona.nombre,persona.Apellido, persona.email, persona.telefono)
+        with CursorDelPool() as cursor:
+            valores = (persona.Nombre, persona.Apellido, persona.Email, persona.Telefono)
             cursor.execute(cls._INSERTAR, valores)
             return cursor.rowcount
         
     @classmethod
     def actualizar(cls,persona):
         with CursorDelPool() as cursor:
-            valores = (persona.nombre, persona.apellido,persona.email,persona.telefono,persona.id_persona)
-        cursor.execute(cls._ACTUALIZAR,valores)
+            valores = (persona.Nombre, persona.Apellido,persona.Email,persona.Telefono,persona.idPersona)
+            cursor.execute(cls._ACTUALIZAR,valores)
         return cursor.rowcount
     @classmethod
     def eliminar(cls,persona):
         with CursorDelPool() as cursor:
-            valores = (persona.idPersona)
+            valores = (persona.idPersona,)
             cursor.execute(cls._ELIMINAR,valores)
             return cursor.rowcount
         

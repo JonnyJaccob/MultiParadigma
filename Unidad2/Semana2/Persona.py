@@ -19,37 +19,38 @@ class Persona:
     @property
     def idPersona(self):
         return self._id_persona
-    @property.setter
+    @idPersona.setter
     def idPersona(self, id):
         self._id_persona = id
     
     @property
     def Nombre(self):
         return self._nombre
-    @property.setter
+    @Nombre.setter
     def Nombre(self, nombre):
         self._nombre = nombre
     
     @property
     def Apellido(self):
         return self._apellido
-    @property.setter
+    @Apellido.setter
     def Apellido(self, apellido):
         self._apellido = apellido
 
     @property
     def Email(self):
         return self._email
-    @property.setter
+    @Email.setter
     def Email(self, email):
         self._email = email
 
     @property
     def Telefono(self):
         return self._telefono
-    @property.setter
+    @Telefono.setter
     def Telefono(self, telefono):
         self._telefono = telefono
 
 if __name__ == "__main__":
     persona1 = Persona(1,"Juan","Perez","j@gmail.com","7171578")
+    print(persona1)
