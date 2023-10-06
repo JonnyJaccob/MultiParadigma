@@ -3,6 +3,7 @@ python -m pip install django
 django-admin startproject <nombredelproyecto>
 
 python manage.py migrate --solo ver migraciones
+python manage.py migrate show migrations
 
 python manage.py startapp <webapp> --nombre de la carpeta
 
@@ -14,3 +15,6 @@ python manage.py runserver --correr el server
 #agregar en el installed_app
 
 #Solo se mueve al archivo view, urls y settings 
+
+#siguiente paso instalar psycopg2
+pip install psycopg2
