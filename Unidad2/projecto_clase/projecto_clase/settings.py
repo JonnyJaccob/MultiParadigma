@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'webapp', 
+    'persona'
 ]
 
 MIDDLEWARE = [
@@ -76,14 +77,14 @@ WSGI_APPLICATION = 'projecto_clase.wsgi.application'
 
 DATABASES = {
     'default': {
-        #'ENGINE':'django.db.backends.postgresql_psycopg2',
-        #'NAME':'django_db',
-        #'USER':'postgres',
-        #'PASSWORD':'contra',
-        #'HOST':'localhost',
-        #'PORT':'5433'
-        'ENGINE':'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE':'django.db.backends.postgresql_psycopg2',
+        'NAME':'django_db',
+        'USER':'postgres',
+        'PASSWORD':'contra',
+        'HOST':'localhost',
+        'PORT':'5433'
+        #'ENGINE':'django.db.backends.sqlite3',
+        #'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
