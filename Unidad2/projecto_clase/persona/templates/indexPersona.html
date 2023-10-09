@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lista de personas</h1>
+    <table>
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>Nombre</td>
+                <td>Email</td>
+            </tr>
+        </thead>
+        <body>
+            {% for persona in personas %}
+                <tr>
+                    <td>{{ persona.id }}</tr>
+                    <td>{{ persona.nombre }} {{ persona.apellido }}</td>
+                    <td>{{ persona.Email }}</td>
+                </tr>
+            {% endfor %}
+        </body>
+    </table>
+</body>
+</html>

@@ -17,8 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from webapp.views import index 
+from persona.views import indexPersona
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',index),
+    path('ListadoPersonas',indexPersona)
 ]
