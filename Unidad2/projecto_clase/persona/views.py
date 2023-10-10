@@ -1,6 +1,15 @@
-from django.shortcuts import render
-
+from django.shortcuts import render,redirect
+from persona.models import Persona
+from persona.forms import PersonaForm
 # Create your views here.
-def indexPersona(request):
-    # Tu lógica de vista aquí
-    return render(request, 'indexPersona.html', context)
+
+def nuevaPersona(request):
+    if request.method=='POST':
+        formaPersona = PersonaForm(request.POST)
+        if formaPersona.is_valid():
+            formaPersona.save()
+            return redirect("ListadoPersonas")
+
+    else:
+        formaPersona=PersonaForm()
+    return render(request,"nuevo.html",{'formaPersona':formaPersona})

@@ -8,7 +8,7 @@ def index(request):
 def indexPersona(request):
     noPersonas = Persona.objects.count()
     personas = Persona.objects.order_by('id')
-    print(personas)
+    #print(personas)
     return render(request,'indexPersona.html',
                   {"personas":personas,"count":noPersonas})#igual al nombre puesto en el for
  
