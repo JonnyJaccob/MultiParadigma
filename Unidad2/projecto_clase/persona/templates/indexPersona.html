@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lista de Personas</title>
 </head>
 <body>
     <h1>Lista de personas</h1>
@@ -19,15 +19,18 @@
                 <td></td>
             </tr>
         </thead>
-        <body>
+        <tbody>
             {% for persona in personas %}
                 <tr>
-                    <td>{{ persona.id }}</tr>
+                    <td>{{ persona.id }}</td>  
                     <td>{{ persona.nombre }} {{ persona.apellido }}</td>
-                    <td>{{ persona.Email }}</td>
+                    <td>{{ persona.email }}</td>
+                    <td><a href="editarPersona/{{persona.id}}">editar</a></td>
+                    <td><a href="detallePersona/{{persona.id}}">detalle</a></td>
+                    <td><a href="eliminarPersona/{{persona.id}}">eliminar</a></td>
                 </tr>
             {% endfor %}
-        </body>
+        </tbody>
     </table>
 </body>
 </html>
