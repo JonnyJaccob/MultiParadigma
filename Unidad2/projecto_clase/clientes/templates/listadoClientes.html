@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="agregarCliente.html"></a>
+    <table>
+        <thead>
+            <th>Nombre</th>
+            <th>Correo</th>
+        </thead>
+        <tbody>
+            {% for cliente in clientes %}
+                <tr>
+                    <td>{{cliente.id}}</td>
+                    <td>{{cliente.nombre}}</td>
+                    <td>{{cliente.correo}}</td>
+                </tr>
+            {% end for %}
+        </tbody>
+    </table>
+</body>
+</html>

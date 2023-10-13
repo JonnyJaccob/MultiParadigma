@@ -19,6 +19,7 @@ from django.urls import path
 from webapp.views import index, indexPersona
 from persona.views import *
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',index),
@@ -26,5 +27,6 @@ urlpatterns = [
     path('nuevaPersona',nuevaPersona),
     path('detallePersona/<int:id>',detallePersona),
     path('editarPersona/<int:id>',editarPersona),
-    path('eliminarPersona/<int:id>',eliminarPersona)
+    path('eliminarPersona/<int:id>',eliminarPersona),
+
 ]
