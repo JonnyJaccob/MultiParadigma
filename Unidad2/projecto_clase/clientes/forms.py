@@ -4,7 +4,7 @@ from clientes.models import Cliente
 class clienteForm(ModelForm):
     class Meta:
         model  = Cliente
-        fields = "_all_"
+        fields = "__all__"
         widget :{
             "email":EmailInput(
                 attrs={

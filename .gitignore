@@ -2,12 +2,10 @@
 
 /Unidad2/pipConf/.venv/Scripts
 
-/Unidad2/pipConf/venv/Lib
+/Unidad2/*/Lib
+/Unidad2/*/Scripts
 
-/Unidad2/pipConf/venv/Scripts
+/Unidad2/*/*/Lib
+/Unidad2/*/*/Scripts
 
 *.bat
-
-/Unidad2/pipConf/venvpep/Lib
-
-/Unidad2/pipConf/venvpep/Scripts
