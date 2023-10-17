@@ -1,1 +1,5 @@
+#comando instalar flask 
+pip install flask
+
+#comando para correr el app.py
 flask run
