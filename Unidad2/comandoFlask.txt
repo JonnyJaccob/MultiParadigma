@@ -19,3 +19,6 @@ flask db migrate
 flask db upgrade
 
 39,env.py from models import Persona,Producto,Images
+
+ruta
+http://localhost:5000/

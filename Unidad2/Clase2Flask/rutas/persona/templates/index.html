@@ -6,9 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Lsitado de persona</h1>
+    <h1>Listado de personas</h1>
     <div>
-        <a href="{{url_for('apppersona.agregar')}}">Agregar</a>
+        <a href="{{ url_for('apppersona.agregar') }}">Agregar</a>
     </div>
     <div>
         <table>
@@ -18,23 +18,19 @@
                     <th>Nombre</th>
                     <th>Apellido</th>
                     <th>Email</th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
                 </tr>
             </thead>
             <tbody>
                 {% for persona in personas %}
                 <tr>
-                    <td>{{persona.id}}</td>
-                    <td>{{persona.nombre}}</td>
-                    <td>{{persona.apellido}}</td>
-                    <td>{{persona.email}}</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <a href="editar/{{persona.id}}">Editar</a>
-                    <a href="eliminar/{{persona.id}}">Eliminar</a>
+                    <td>{{ persona.id }}</td>
+                    <td>{{ persona.nombre }}</td>
+                    <td>{{ persona.apellido }}</td>
+                    <td>{{ persona.email }}</td>
+                    <td><a href="{{ url_for('apppersona.editar', id=persona.id) }}">Editar</a></td>
+                    <td><a href="{{ url_for('apppersona.eliminar', id=persona.id) }}">Eliminar</a></td>
                 </tr>
                 {% endfor %}
             </tbody>

@@ -2,8 +2,9 @@ class BasicConf:
     USER_DB = 'postgres'
     PASS_DB = 'contra'
     URL_DB='localhost'
-    NAME_DB='flask_clase'
-    FULL_URL_DB=f"postgresql://{USER_DB}:{PASS_DB}@{URL_DB}/{NAME_DB}"
+    PORT_DB = '5433' 
+    NAME_DB = 'flask_clase'
+    FULL_URL_DB = f"postgresql://{USER_DB}:{PASS_DB}@{URL_DB}:{PORT_DB}/{NAME_DB}"
 
     SQLALCHEMY_DATABASE_URI = FULL_URL_DB
     SQLALCHEMY_TRACK_MODIFICATIONS = False

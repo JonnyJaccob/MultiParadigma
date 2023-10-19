@@ -20,7 +20,7 @@ def agregar():
             personaForm.populate_obj(persona)
             db.session.add(persona)
             db.session.commit()
-            return redirect(url_for['apppersona.inicio'])
+            return redirect(url_for('apppersona.inicial'))
     return render_template('agregar.html',forma=personaForm)
 
 @appPersona.route("/editar/<int:id>",methods=["GET","POST"])
@@ -31,7 +31,7 @@ def editar(id):
         if personaForm.validate_on_submit():
             personaForm.populate_obj(persona)
             db.session.commit()
-            return redirect(url_for(['apppersona.editar']))
+            return redirect(url_for('apppersona.inicial'))
     return render_template('editar.html',forma=personaForm)
 
 @appPersona.route("/eliminar/<int:id>")
@@ -39,4 +39,4 @@ def eliminar(id):
     persona = Persona.query.get_or_404(id)
     db.session.delete(persona)
     db.session.commit()
-    return redirect(url_for('apppersona.inicio'))
+    return redirect(url_for('apppersona.inicial'))
