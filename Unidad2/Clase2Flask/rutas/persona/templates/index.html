@@ -3,7 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" 
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+        crossorigin="anonymous">
+
+        <link rel="icon" href="{{ url_for('apppersona.static', filename='favicon.ico') }}">
+
+    <title>Pagina Principal</title>
 </head>
 <body>
     <h1>Listado de personas</h1>
@@ -11,7 +18,7 @@
         <a href="{{ url_for('apppersona.agregar') }}">Agregar</a>
     </div>
     <div>
-        <table>
+        <table border="1">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -35,6 +42,9 @@
                 {% endfor %}
             </tbody>
         </table>
+        <h3>Foto Logo</h3><img src="{{ url_for('apppersona.static', filename='FotoCyber.jpg') }}" alt="Mike" height="240px" width="300px">
+        <p>Ruta imagen: {{ url_for('apppersona.static', filename='FotoCyber.jpg') }}</p>
+        <p>Ruta generada: {{ url_for('apppersona.static', filename='favicon.ico') }}</p>
     </div>
 </body>
 </html>

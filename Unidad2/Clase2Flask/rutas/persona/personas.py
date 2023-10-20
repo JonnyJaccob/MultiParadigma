@@ -1,9 +1,12 @@
-from flask import Blueprint,request,redirect,render_template,url_for
+from flask import Blueprint,request,redirect,render_template,url_for,send_from_directory
 from models import Persona
 from forms import PersonaForm
 from app import db
+import os
 
-appPersona = Blueprint('apppersona',__name__,template_folder="templates")
+appPersona = Blueprint('apppersona', __name__, template_folder="templates",static_folder='static')
+
+
 
 @appPersona.route('/')
 @appPersona.route('/index')
@@ -40,3 +43,4 @@ def eliminar(id):
     db.session.delete(persona)
     db.session.commit()
     return redirect(url_for('apppersona.inicial'))
+
