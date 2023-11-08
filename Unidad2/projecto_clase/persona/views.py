@@ -8,7 +8,7 @@ def nuevaPersona(request):
         formaPersona = PersonaForm(request.POST)
         if formaPersona.is_valid():
             formaPersona.save()
-            return redirect("ListadoPersonas")
+            return redirect("ListadoPersonas") 
 
     else:
         formaPersona=PersonaForm()
