@@ -2,6 +2,7 @@ from flask import Blueprint,request,jsonify,render_template,redirect
 from sqlalchemy import exc
 from models import User
 from app import db,bcrypt
+from auth import tokenCheck
 
 
 appuser = Blueprint('appuser',__name__,template_folder='templates')
@@ -36,3 +37,8 @@ def login():
             }
             return jsonify(response)
     return jsonify({"message":'Datos incorrectos'})
+
+@appuser.route('/usuarios',methods=['GET'])
+@tokenCheck
+def getUsers(usuario):
+    pass
