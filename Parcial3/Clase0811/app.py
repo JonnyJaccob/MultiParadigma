@@ -4,7 +4,7 @@ from database import db
 from encriptador import bcrypt  
 from flask_migrate import Migrate
 from config import BaseConf
-from routes.user import appuser
+from routes.user.user import appuser
 
 app=Flask(__name__)
 app.register_blueprint(appuser)

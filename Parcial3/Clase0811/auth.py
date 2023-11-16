@@ -13,7 +13,7 @@ def obtenerInfo(token):
                     'user_id':user.id,
                     'email':user.email,
                     'admin':user.admin,
-                    'registered_on':user.registered.on #?
+                    'registered_on':user.registered_on 
                 }
             }
             return usuario
@@ -41,3 +41,14 @@ def tokenCheck(f):
             return jsonify({'message':'error'})
         return f(info['data'],*args,**kwargs)
     return verificar
+
+def verificar(token):
+    if not token:
+        return jsonify({'message':'Token no encontrado'})
+    try:
+        info = obtenerInfo(token)
+        if info['status'] == 'fail':
+            return jsonify({'message':'token invalido'})
+    except:
+        return jsonify({'message':'error'})
+    return info
